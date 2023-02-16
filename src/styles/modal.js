@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Modal = styled.div`
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   position: absolute;
-  top: 30%;
-  left: 150%;
+  top: 20%;
+  left: 180%;
   background: white;
   display: flex;
   justify-content: center;
@@ -20,8 +20,8 @@ export const Modal = styled.div`
 export const BookingModal = styled(Modal)`
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 700px;
+  width: 50%;
+  height: 650px;
   top: 20%;
   left: 30%;
   & > button {

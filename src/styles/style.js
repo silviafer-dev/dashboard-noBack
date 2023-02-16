@@ -88,13 +88,13 @@ export const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
-  height: 550px;
+  width: 30%;
+  height: 450px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: white;
   border-radius: 20px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   & > label {

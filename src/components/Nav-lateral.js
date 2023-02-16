@@ -32,7 +32,7 @@ export function NavLateral({ open }) {
     setOpenModal(false);
   };
 
-  let photoUser = MockUsers.find((item) => item.full_name === auth.full_name);
+  let photoUser = MockUsers.find((item) => item.email === auth.email);
   if (photoUser) {
     photoUser = photoUser.photo;
   }
@@ -76,7 +76,7 @@ export function NavLateral({ open }) {
           <DefaultButton onClick={handleOpen}>Edit</DefaultButton>
         </UserContainer>
       </div>
-      <footer>
+      <footer style={{ fontSize: "8px" }}>
         <Footer>Travl Hotel Admin Dashboard</Footer>
         <p>© 2020 All Rights Reserved</p>
       </footer>

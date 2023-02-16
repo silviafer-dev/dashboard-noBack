@@ -31,17 +31,6 @@ export function ModalUser({ openModal, handleClose }) {
           }
         />
         <br />
-        <label htmlFor="email">Email:</label>
-        <input
-          className="email"
-          name="email"
-          placeholder=""
-          type="email"
-          value={auth.email}
-          onChange={(e) =>
-            dispatchAuth({ type: types.email, value: e.target.value })
-          }
-        />
       </FormModal>
       <DefaultButton onClick={handleClose}>Save</DefaultButton>
     </Modal>

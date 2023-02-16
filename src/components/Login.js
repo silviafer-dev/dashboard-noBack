@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { myContext } from "../App";
 import { MockUsers } from "../data/mockUsers";
 import { types } from "../reducerLogin/ReducerLogin";
-import { FormLogin, NavLink } from "../styles/style";
+import { FormLogin } from "../styles/style";
 import { DefaultButton } from "../styles/style-buttons";
 
 export function Login() {
@@ -12,7 +12,6 @@ export function Login() {
   let location = useLocation();
   const { auth, dispatchAuth } = useContext(myContext);
   const [input, setInput] = useState({
-    full_name: "",
     email: "",
     password: "",
   });
@@ -43,20 +42,12 @@ export function Login() {
   return (
     <FormLogin onSubmit={handleSubmit}>
       <h1>Login</h1>
-      <label htmlFor="full_name">Username:</label>
-      <input
-        className="full_name"
-        name="full_name"
-        placeholder="Full Name"
-        value={input.full_name}
-        onChange={handleChange}
-      />
 
       <label htmlFor="email">Email:</label>
       <input
         className="email"
         name="email"
-        placeholder="email"
+        placeholder="dorothy@hotmail.com"
         value={input.email}
         onChange={handleChange}
       />
@@ -68,12 +59,18 @@ export function Login() {
         type="password"
         value={input.password}
         onChange={handleChange}
+        placeholder="12345"
       />
 
       <DefaultButton type="submit" className="login">
         Login
       </DefaultButton>
-      <NavLink to={"/"}>Dashboard</NavLink>
+
+      <div style={{ color: "rgba(0,0,0,0.5)", fontSize: "12px" }}>
+        <p>Email: dorothy@hotmail.com</p>
+        <p>Password: 12345</p>
+      </div>
+      {/* <NavLink to={"/"}>Dashboard</NavLink> */}
     </FormLogin>
   );
 }

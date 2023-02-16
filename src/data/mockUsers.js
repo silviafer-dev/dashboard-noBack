@@ -15,7 +15,7 @@ export const MockUsers = [
   {
     full_name: "Dorothy Russel",
     job_title: "Manager",
-    email: "Dorothy79@hotmail.com",
+    email: "dorothy@hotmail.com",
     photo:
       "https://imgs.search.brave.com/Ko31MprNiavbsmDn3LubWGHSlHMhEK4MEwWmezIJpgM/rs:fit:640:640:1/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/cG5nLXZlY3Rvci8y/MDE5MDcwMi9vdXJs/YXJnZS9wbmd0cmVl/LWZlbWFsZS11c2Vy/LWF2YXRhcnMtZmxh/dC1zdHlsZS13b21l/bi1wcm9mZXNzaW9u/LXZlY3Rvci1wbmct/aW1hZ2VfMTUyOTE3/MS5qcGc",
     id: "524b8174",
@@ -23,7 +23,7 @@ export const MockUsers = [
     start_date: "2022-08-10",
     working_functions: "Lorem non culpa laborum aute",
     working_situation: "ACTIVE",
-    password: "FRG3T28Y88H8W6GRR",
+    password: "12345",
   },
   {
     full_name: "Bertha Morar",
