@@ -16,11 +16,6 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-export const fetchContact = createAsyncThunk("get/fetchContact", async (id) => {
-  const oneContact = MockContacts.find((item) => item.id === id);
-  return await delay(oneContact, 100);
-});
-
 export const removeContact = createAsyncThunk(
   "delete/removeContact",
   async (id) => {
@@ -31,7 +26,6 @@ export const removeContact = createAsyncThunk(
 
 const initialState = {
   contacts: [],
-  contact: [],
 };
 
 const usersSlice = createSlice({
@@ -42,10 +36,6 @@ const usersSlice = createSlice({
     builder.addCase(fetchContacts.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.contacts = action.payload;
-    });
-    builder.addCase(fetchContact.fulfilled, (state, action) => {
-      state.status = "succeeded";
-      state.contact = action.payload;
     });
 
     builder.addCase(removeContact.fulfilled, (state, action) => {

@@ -12,7 +12,6 @@ import {
 import { ContainerColumn, ContainerPage, Table } from "../styles/containers";
 import {
   Date,
-  LinkList,
   ReviewButton,
   TableTd,
   TrHead,
@@ -46,7 +45,7 @@ export function Contacts({ open, setOpen }) {
       <NavLateral open={open} setOpen={setOpen} />
       <ContainerColumn>
         <Nav title="Contact Reviews" open={open} setOpen={setOpen} />
-        <ReviewsSection contacts={contacts} />
+        <ReviewsSection open={open} contacts={contacts} />
         <Table>
           <thead>
             <TrHead>
@@ -84,9 +83,7 @@ export function Contacts({ open, setOpen }) {
                 </td>
                 <Date>{review.date}</Date>
                 <td>
-                  <LinkList to={`/contacts/${review.id}`}>
-                    <UserName> {review.customer}</UserName>
-                  </LinkList>
+                  <UserName> {review.customer}</UserName>
                 </td>
 
                 <TableTd>{review.comment}</TableTd>
