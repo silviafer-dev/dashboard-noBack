@@ -22,6 +22,7 @@ import {
   selectState,
 } from "../features/bookings/bookingsSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useSearch } from "../hooks/useSearch";
 
 let PageSize = 10;
 
@@ -32,6 +33,11 @@ export function Bookings({ open, setOpen }) {
   const [orderBy, setOrderBy] = useState("full_name");
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
+  const { searchResults, searchBooking, handleChange } = useSearch(bookings);
+
+  useEffect(() => {
+    dispatch(fetchBookings());
+  }, [dispatch]);
 
   const handleOpen = () => {
     setOpenModal(true);
@@ -40,15 +46,15 @@ export function Bookings({ open, setOpen }) {
     setOpenModal(false);
   };
 
-  useEffect(() => {
-    dispatch(fetchBookings());
-  }, [dispatch]);
-
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    return roomState.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, roomState]);
+    if (searchResults === "") {
+      return roomState.slice(firstPageIndex, lastPageIndex);
+    } else {
+      return searchResults.slice(firstPageIndex, lastPageIndex);
+    }
+  }, [currentPage, roomState, searchResults]);
 
   useEffect(() => {
     const orderedRooms = bookings.filter((room) => room[orderBy]);
@@ -84,6 +90,12 @@ export function Bookings({ open, setOpen }) {
           </SelectButton>
           <AddBooking openModal={openModal} handleClose={handleClose} />
           <LightButton onClick={handleOpen}>Add New Booking</LightButton>
+          <input
+            type="text"
+            placeholder="Search for guest name..."
+            value={searchBooking}
+            onChange={handleChange}
+          />
         </div>
         <Table>
           <thead>
