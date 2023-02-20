@@ -18,6 +18,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { createContext } from "react";
 import { authReducer, initialAuthState } from "./reducerLogin/ReducerLogin";
+import { ToastContainer } from "react-toastify";
 
 let contextValue;
 export const myContext = createContext(contextValue);
@@ -88,6 +89,16 @@ function App() {
           </Routes>
         </DndProvider>
       </myContext.Provider>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }

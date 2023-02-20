@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { MockContacts } from "../../data/mockContacts";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = (message) => {
+  toast.success(message);
+};
 
 export function delay(data, time) {
   return new Promise((resolve, reject) => {
@@ -41,6 +47,7 @@ const usersSlice = createSlice({
     builder.addCase(removeContact.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.contacts = action.payload;
+      notify("Comment deleted with success!");
     });
   },
 });

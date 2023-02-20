@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { MockBookings } from "../../data/mockBookings";
+
+const notify = (message) => {
+  toast.success(message);
+};
 
 export function delay(data, time) {
   return new Promise((resolve, reject) => {
@@ -67,14 +73,17 @@ const bookingsSlice = createSlice({
     builder.addCase(createNewBooking.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.bookings = [...state.bookings, action.payload];
+      notify("Booking added with success!");
     });
     builder.addCase(removeBooking.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.bookings = action.payload;
+      notify("Booking deleted with success!");
     });
     builder.addCase(updateBooking.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.bookings = action.payload;
+      notify("Booking updated with success!");
     });
   },
 });

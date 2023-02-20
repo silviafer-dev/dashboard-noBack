@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { myContext } from "../App";
 import { MockUsers } from "../data/mockUsers";
 import { types } from "../reducerLogin/ReducerLogin";
@@ -15,7 +17,11 @@ export function Login() {
     email: "",
     password: "",
   });
-  console.log(auth);
+
+  const notify = (message) => {
+    toast.error(message);
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
     const dataInput = MockUsers.find(
@@ -31,13 +37,15 @@ export function Login() {
       });
       let from = location.state?.from?.pathname || "/";
       navigate(from, { replace: true });
+    } else if (!auth.isAuth) {
+      notify("Username or password is incorrect! Please, try again!");
     } else {
       dispatchAuth({ type: types.logout });
     }
   }
 
   const handleChange = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value });
+    setInput({ ...input, [e.target.name]: e.target.value.trim() });
   };
   return (
     <FormLogin onSubmit={handleSubmit}>

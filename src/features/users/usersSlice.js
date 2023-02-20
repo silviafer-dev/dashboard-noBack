@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { MockUsers } from "../../data/mockUsers";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = (message) => {
+  toast.success(message);
+};
 
 export function delay(data, time) {
   return new Promise((resolve, reject) => {
@@ -60,14 +66,17 @@ const usersSlice = createSlice({
     builder.addCase(createNewUser.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.users = [...state.users, action.payload];
+      notify("User added with success!");
     });
     builder.addCase(removeUser.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.users = action.payload;
+      notify("User deleted with success!");
     });
     builder.addCase(updateUser.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.users = action.payload;
+      notify("User updated with success!");
     });
   },
 });

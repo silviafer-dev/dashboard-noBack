@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { MockRooms } from "../../data/mockRooms";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = (message) => {
+  toast.success(message);
+};
 
 export function delay(data, time) {
   return new Promise((resolve, reject) => {
@@ -9,8 +15,7 @@ export function delay(data, time) {
   });
 }
 
-export const fetchRooms = createAsyncThunk("post/fetchRooms",
- async () => {
+export const fetchRooms = createAsyncThunk("post/fetchRooms", async () => {
   return await delay(MockRooms, 100);
 });
 
@@ -26,13 +31,10 @@ export const createNewRoom = createAsyncThunk(
     return await delay((MockRooms, newArray), 100);
   }
 );
-export const removeRoom = createAsyncThunk(
-  "delete/removeRoom",
-  async (id) => {
-    const newRoomsArray = MockRooms.filter((item) => item.id !== id);
-    return await delay(newRoomsArray, 100);
-  }
-);
+export const removeRoom = createAsyncThunk("delete/removeRoom", async (id) => {
+  const newRoomsArray = MockRooms.filter((item) => item.id !== id);
+  return await delay(newRoomsArray, 100);
+});
 export const updateRoom = createAsyncThunk(
   "update/updateRoom",
   async (id, data) => {
@@ -56,7 +58,6 @@ const roomsSlice = createSlice({
     builder.addCase(fetchRooms.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.rooms = action.payload;
-
     });
     builder.addCase(fetchRoom.fulfilled, (state, action) => {
       state.status = "succeeded";
@@ -65,20 +66,22 @@ const roomsSlice = createSlice({
     builder.addCase(createNewRoom.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.rooms = [...state.rooms, action.payload];
+      notify("Room added with success!");
     });
     builder.addCase(removeRoom.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.rooms = action.payload;
+      notify("Room deleted with success!");
     });
     builder.addCase(updateRoom.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.rooms = action.payload;
+      notify("Room updated with success!");
     });
   },
 });
 
 export default roomsSlice.reducer;
-
 
 export const selectStateRooms = (state) => state.rooms.rooms;
 export const selectStateDetail = (state) => state.rooms.room;
