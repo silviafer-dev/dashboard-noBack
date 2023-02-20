@@ -4,9 +4,14 @@ import { useMemo, useEffect, useState } from "react";
 import { Nav } from "../components/Nav";
 import { NavLateral } from "../components/Nav-lateral";
 import { Pagination } from "../components/pagination";
-import { LinkList } from "../styles/style";
+import { InputSearch, LinkList } from "../styles/style";
 
-import { ContainerColumn, ContainerPage, Table } from "../styles/containers";
+import {
+  ContainerColumn,
+  ContainerFilter,
+  ContainerPage,
+  Table,
+} from "../styles/containers";
 import { Date, Id, TrHead, TRow, UserName } from "../styles/style";
 import {
   Button,
@@ -23,6 +28,7 @@ import {
 } from "../features/bookings/bookingsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearch } from "../hooks/useSearch";
+import { SearchIcon } from "../styles/icons";
 
 let PageSize = 10;
 
@@ -33,7 +39,7 @@ export function Bookings({ open, setOpen }) {
   const [orderBy, setOrderBy] = useState("full_name");
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
-  const { searchResults, searchBooking, handleChange } = useSearch(bookings);
+  const { searchResults, searchBooking, handleChange } = useSearch(roomState);
 
   useEffect(() => {
     dispatch(fetchBookings());
@@ -45,17 +51,6 @@ export function Bookings({ open, setOpen }) {
   const handleClose = () => {
     setOpenModal(false);
   };
-
-  const currentTableData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
-    if (searchResults === "") {
-      return roomState.slice(firstPageIndex, lastPageIndex);
-    } else {
-      return searchResults.slice(firstPageIndex, lastPageIndex);
-    }
-  }, [currentPage, roomState, searchResults]);
-
   useEffect(() => {
     const orderedRooms = bookings.filter((room) => room[orderBy]);
     orderedRooms.sort((a, b) => {
@@ -69,6 +64,16 @@ export function Bookings({ open, setOpen }) {
     setRoomState(orderedRooms);
   }, [bookings, orderBy]);
 
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    if (searchResults.length > 0) {
+      return searchResults;
+    } else {
+      return roomState.slice(firstPageIndex, lastPageIndex);
+    }
+  }, [currentPage, roomState, searchResults]);
+
   const handleRemove = (id) => {
     dispatch(removeBooking(id));
   };
@@ -78,25 +83,30 @@ export function Bookings({ open, setOpen }) {
       <NavLateral open={open} setOpen={setOpen} />
       <ContainerColumn>
         <Nav title="Bookings" open={open} setOpen={setOpen} />
-        <div>
-          <SelectButton
-            value={orderBy}
-            onChange={(e) => setOrderBy(e.target.value)}
-          >
-            <option value="full_name">Guest</option>
-            <option value="order_date">Order Date</option>
-            <option value="check_in">Check In</option>
-            <option value="check_out">Check Out</option>
-          </SelectButton>
-          <AddBooking openModal={openModal} handleClose={handleClose} />
-          <LightButton onClick={handleOpen}>Add New Booking</LightButton>
-          <input
-            type="text"
-            placeholder="Search for guest name..."
-            value={searchBooking}
-            onChange={handleChange}
-          />
-        </div>
+        <ContainerFilter>
+          <div>
+            <SelectButton
+              value={orderBy}
+              onChange={(e) => setOrderBy(e.target.value)}
+            >
+              <option value="full_name">Guest</option>
+              <option value="order_date">Order Date</option>
+              <option value="check_in">Check In</option>
+              <option value="check_out">Check Out</option>
+            </SelectButton>
+            <AddBooking openModal={openModal} handleClose={handleClose} />
+            <LightButton onClick={handleOpen}>Add New Booking</LightButton>
+          </div>
+          <div style={{ position: "relative" }}>
+            <InputSearch
+              type="text"
+              placeholder="Search for guest name..."
+              value={searchBooking}
+              onChange={handleChange}
+            />
+            <SearchIcon />
+          </div>
+        </ContainerFilter>
         <Table>
           <thead>
             <TrHead>

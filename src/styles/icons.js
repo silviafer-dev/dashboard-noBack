@@ -1,5 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FiSearch } from "react-icons/fi";
 import styled from "styled-components";
+
+export const SearchIcon = styled(FiSearch)`
+  position: absolute;
+  left: 6px;
+  bottom: 11px;
+  font-size: 20px;
+`;
 
 export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: #135846;

@@ -7,6 +7,7 @@ export const useSearch = (bookings) => {
   const handleChange = (e) => {
     setSearchBooking(e.target.value);
   };
+
   useEffect(() => {
     const results = bookings.filter((person) =>
       person.full_name.toLowerCase().includes(searchBooking.toLowerCase())

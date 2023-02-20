@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+export const InputSearch = styled.input`
+  padding: 10px 10px 10px 28px;
+  border-radius: 10px;
+  border: 2px solid #135846;
+  color: #135846;
+  font-size: 16px;
+`;
+
 export const NavLink = styled(Link)`
   text-align: center;
   list-style-type: none;
