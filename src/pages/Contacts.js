@@ -27,6 +27,10 @@ export function Contacts({ open, setOpen }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    document.title = "HMiranda | Contacts";
+  }, []);
+
+  useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 

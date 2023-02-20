@@ -14,8 +14,13 @@ import { StyledIconKpi } from "../styles/icons";
 import { ReviewsSection } from "../components/ReviewsSection";
 import { BarChart } from "../components/BarChart";
 import { Calendar } from "../components/Calendar";
+import { useEffect } from "react";
 
 export function Dashboard({ open, setOpen }) {
+  useEffect(() => {
+    document.title = "HMiranda | Dashboard";
+  }, []);
+
   return (
     <ContainerPage open={open}>
       <NavLateral open={open} setOpen={setOpen} />

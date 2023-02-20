@@ -28,6 +28,10 @@ export function Rooms({ open, setOpen }) {
   }, [dispatch]);
 
   useEffect(() => {
+    document.title = "HMiranda | Rooms";
+  }, []);
+
+  useEffect(() => {
     setRoomsData(rooms);
   }, [rooms]);
 

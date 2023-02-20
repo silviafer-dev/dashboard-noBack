@@ -26,6 +26,10 @@ export function Users({ open, setOpen }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
 
+  useEffect(() => {
+    document.title = "HMiranda | Users";
+  }, []);
+
   const handleOpen = () => {
     setOpenModal(true);
   };

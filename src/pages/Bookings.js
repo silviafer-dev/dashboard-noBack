@@ -40,6 +40,9 @@ export function Bookings({ open, setOpen }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const { searchResults, searchBooking, handleChange } = useSearch(roomState);
+  useEffect(() => {
+    document.title = "HMiranda | Bookings";
+  }, []);
 
   useEffect(() => {
     dispatch(fetchBookings());

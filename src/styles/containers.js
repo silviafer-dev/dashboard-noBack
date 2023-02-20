@@ -21,7 +21,7 @@ export const ContainerFilter = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 40px 0 20px;
+  padding: 0 25px 0 20px;
   justify-content: space-between;
 `;
 export const ContainerMenuHead = styled.div`
