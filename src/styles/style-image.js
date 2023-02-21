@@ -10,7 +10,6 @@ export const Logo = styled.img`
   padding: 20px 0;
 `;
 export const ImageBookingRoom = styled.div`
-  // position: relative
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

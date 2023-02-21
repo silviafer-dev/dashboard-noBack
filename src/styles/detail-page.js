@@ -12,6 +12,16 @@ export const ContainerDetail = styled.div`
   height: 100%;
   padding: 30px;
 `;
+export const ContainerDetailBooking = styled.div`
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 30px;
+  width: 50%;
+  margin: 30px 0 30px 30px;
+  border-radius: 20px 0 0 20px;
+  height: 620px;
+`;
 
 export const NameDetail = styled.h2`
   padding: 30px 30px 0 0px;
@@ -47,22 +57,11 @@ border: none;
    cursor: pointer;
   }
 `;
-export const ButtonEdit = styled.button`
-  width: fit-content;
-  padding: 10px 30px;
-  color: #135846;
-  background-color: #ebf1ef;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 10px;
-  margin: 20px 20px 20px 0;
-  cursor: pointer;
-`;
+
 export const LinkDetail = styled(Link)`
   text-decoration: none;
   height: 50px;
   align-items: center;
-  padding-left: 20px;
   color: #799283;
   font-weight: 600;
 `;

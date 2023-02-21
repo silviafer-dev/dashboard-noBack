@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { GetFullDate } from "../components/GetFullDate";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { Nav } from "../components/Nav";
 import { NavLateral } from "../components/Nav-lateral";
 import {
@@ -12,16 +13,15 @@ import {
 import { UpdateBooking } from "../features/bookings/UpdateBooking";
 import { ContainerColumn, ContainerPage } from "../styles/containers";
 import {
-  ButtonDelete,
-  ButtonEdit,
   CheckBlock,
-  ContainerDetail,
+  ContainerDetailBooking,
   IdDetail,
   ItemsDetail,
   LinkDetail,
   NameDetail,
 } from "../styles/detail-page";
 import { ImageBookingRoom, Ribbon } from "../styles/style-image";
+import { IconDelete, IconEdit } from "../styles/icons";
 
 export function Booking({ open, setOpen }) {
   const { id } = useParams();
@@ -63,14 +63,10 @@ export function Booking({ open, setOpen }) {
       <ContainerColumn>
         <Nav title="Booking Detail" open={open} setOpen={setOpen} />
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <ContainerDetail
-            style={{
-              width: "50%",
-              margin: "30px 0 30px 30px",
-              borderRadius: "20px 0 0 20px",
-              height: "580px",
-            }}
-          >
+          <ContainerDetailBooking>
+            <LinkDetail to="/bookings">
+              <IoIosArrowRoundBack style={{ fontSize: "60px" }} />
+            </LinkDetail>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <img
                 src={booking.photo_guest}
@@ -101,30 +97,26 @@ export function Booking({ open, setOpen }) {
             <ItemsDetail>Special request</ItemsDetail>
             <p style={{ fontSize: "14px" }}>{booking.special_request}</p>
             <div>
-              <ButtonEdit
+              <IconEdit
                 onClick={() => {
                   handleOpen(booking);
                 }}
-              >
-                Edit
-              </ButtonEdit>
-              <ButtonDelete
+              />
+
+              <IconDelete
                 onClick={() => {
                   handleRemove(booking.id);
                   navigate(-1);
                 }}
-              >
-                🗑️
-              </ButtonDelete>
+              />
 
               <UpdateBooking
                 openModal={openModal}
                 edit={edit}
                 handleClose={handleClose}
               />
-              <LinkDetail to="/bookings">← Back to Bookings</LinkDetail>
             </div>
-          </ContainerDetail>
+          </ContainerDetailBooking>
           <ImageBookingRoom
             style={{
               backgroundImage: `url(${booking.photo_room})`,
@@ -133,6 +125,7 @@ export function Booking({ open, setOpen }) {
               justifyContent: "flex-end",
               flexWrap: "wrap",
               position: "relative",
+              height: "620px",
             }}
           >
             <Ribbon status={booking.status}>

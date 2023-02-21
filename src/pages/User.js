@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { Nav } from "../components/Nav";
@@ -11,8 +12,6 @@ import {
 } from "../features/users/usersSlice";
 import { ContainerColumn, ContainerPage } from "../styles/containers";
 import {
-  ButtonDelete,
-  ButtonEdit,
   ContainerDetail,
   ItemsDetail,
   LinkDetail,
@@ -21,6 +20,7 @@ import {
   StatusUserDetail,
   TitleDetail,
 } from "../styles/detail-page";
+import { IconDelete, IconEdit } from "../styles/icons";
 
 export function User({ open, setOpen }) {
   const { id } = useParams();
@@ -51,6 +51,9 @@ export function User({ open, setOpen }) {
       <ContainerColumn>
         <Nav title="User Detail" open={open} setOpen={setOpen} />
         <ContainerDetail>
+          <LinkDetail to="/users">
+            <IoIosArrowRoundBack style={{ fontSize: "60px" }} />
+          </LinkDetail>
           <RoomBlock>
             <PhotoDetail src={user.photo} alt="" />
             <div>
@@ -74,21 +77,18 @@ export function User({ open, setOpen }) {
             {user.working_situation}
           </StatusUserDetail>
           <div>
-            <ButtonEdit
+            <IconEdit
               onClick={() => {
                 handleOpen(user);
               }}
-            >
-              Edit
-            </ButtonEdit>
-            <ButtonDelete
+            />
+            <IconDelete
               onClick={() => {
                 handleRemove(user._id);
                 navigate(-1);
               }}
-            >
-              🗑️
-            </ButtonDelete>
+            />
+
             <UpdateUser
               openModal={openModal}
               user={user}
@@ -96,7 +96,6 @@ export function User({ open, setOpen }) {
               handleClose={handleClose}
             />
           </div>
-          <LinkDetail to="/users">← Back to Users List</LinkDetail>
         </ContainerDetail>
       </ContainerColumn>
     </ContainerPage>

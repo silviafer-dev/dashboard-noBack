@@ -50,7 +50,9 @@ export const ListItem = ({
           padding: "20px",
         }}
       >
-        <Image src={item.photo} alt="" />
+        <LinkList to={`/rooms/${item.id}`}>
+          <Image src={item.photo} alt="" />
+        </LinkList>
       </td>
       <Date>{item.room_number}</Date>
 

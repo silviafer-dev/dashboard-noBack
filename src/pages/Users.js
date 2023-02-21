@@ -108,7 +108,9 @@ export function Users({ open, setOpen }) {
                     padding: "20px",
                   }}
                 >
-                  <Image src={user.photo} alt="" />
+                  <LinkList to={`/users/${user.id}`}>
+                    <Image src={user.photo} alt="" />
+                  </LinkList>
                 </td>
                 <td>
                   <LinkList to={`/users/${user.id}`}>

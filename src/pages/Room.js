@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { Nav } from "../components/Nav";
@@ -12,7 +13,6 @@ import { UpdateRoom } from "../features/rooms/UpdateRoom";
 import { ContainerColumn, ContainerPage } from "../styles/containers";
 import {
   ButtonDelete,
-  ButtonEdit,
   CheckStatusButton,
   ContainerDetail,
   ItemsDetail,
@@ -21,6 +21,7 @@ import {
   PriceDetail,
   RoomBlock,
 } from "../styles/detail-page";
+import { IconDelete, IconEdit } from "../styles/icons";
 import { Id, PerNight } from "../styles/style";
 
 export function Room({ open, setOpen }) {
@@ -51,6 +52,9 @@ export function Room({ open, setOpen }) {
       <ContainerColumn>
         <Nav title="Room Detail" open={open} setOpen={setOpen} />
         <ContainerDetail>
+          <LinkDetail to="/rooms">
+            <IoIosArrowRoundBack style={{ fontSize: "60px" }} />
+          </LinkDetail>
           <RoomBlock>
             <PhotoDetail src={room.photo} alt="" />
             <div>
@@ -78,27 +82,23 @@ export function Room({ open, setOpen }) {
             {room.status}
           </CheckStatusButton>
           <div>
-            <ButtonEdit
+            <IconEdit
               onClick={() => {
                 handleOpen(room);
               }}
-            >
-              Edit
-            </ButtonEdit>
-            <ButtonDelete
+            />
+            <IconDelete
               onClick={() => {
                 handleRemove(room.id);
               }}
-            >
-              🗑️
-            </ButtonDelete>
+            />
+
             <UpdateRoom
               openModal={openModal}
               edit={edit}
               handleClose={handleClose}
             />
           </div>
-          <LinkDetail to="/rooms">← Back to Rooms</LinkDetail>
         </ContainerDetail>
       </ContainerColumn>
     </ContainerPage>
