@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
+import { GetFullDate } from "../components/GetFullDate";
 import { Nav } from "../components/Nav";
 import { NavLateral } from "../components/Nav-lateral";
 import {
@@ -20,7 +21,7 @@ import {
   LinkDetail,
   NameDetail,
 } from "../styles/detail-page";
-import { ImageBookingRoom } from "../styles/style-image";
+import { ImageBookingRoom, Ribbon } from "../styles/style-image";
 
 export function Booking({ open, setOpen }) {
   const { id } = useParams();
@@ -44,15 +45,14 @@ export function Booking({ open, setOpen }) {
     setEdit(booking);
     setOpenModal(true);
   };
-
-  useEffect(() => {
-    setNewBooking(booking);
-  }, [booking]);
-
   const handleClose = () => {
     setOpenModal(false);
     setNewBooking(newBooking);
   };
+
+  useEffect(() => {
+    setNewBooking(booking);
+  }, [booking]);
 
   if (!booking.id) {
     return null;
@@ -82,29 +82,24 @@ export function Booking({ open, setOpen }) {
                 <IdDetail>ID {booking.id}</IdDetail>
               </div>
             </div>
-            {/* <ItemsDetail>Order Date </ItemsDetail>
-            <p> {booking.order_date.slice(0, 10)}</p> */}
             <CheckBlock>
               <div>
                 <ItemsDetail>Check In</ItemsDetail>
-                <p>{booking.check_in.slice(0, 10)}</p>
+                <GetFullDate date={booking.check_in} />
               </div>
               <div>
                 <ItemsDetail>Check Out</ItemsDetail>
-                <p>{booking.check_out.slice(0, 10)}</p>
+                <GetFullDate date={booking.check_out} />
               </div>
             </CheckBlock>
 
             <ItemsDetail>Room Info</ItemsDetail>
-            <p>
+            <p style={{ fontWeight: "bold", fontSize: "18px" }}>
               {booking.room_type} - {booking.room_number}
             </p>
 
             <ItemsDetail>Special request</ItemsDetail>
-            <p>{booking.special_request}</p>
-            {/* <ButtonStatus status={booking.status}>
-              {booking.status} */}
-            {/* </ButtonStatus> */}
+            <p style={{ fontSize: "14px" }}>{booking.special_request}</p>
             <div>
               <ButtonEdit
                 onClick={() => {
@@ -137,8 +132,12 @@ export function Booking({ open, setOpen }) {
               flexDirection: "column",
               justifyContent: "flex-end",
               flexWrap: "wrap",
+              position: "relative",
             }}
           >
+            <Ribbon status={booking.status}>
+              <span>{booking.status}</span>
+            </Ribbon>
             <p
               style={{
                 margin: " 0 0 0 40px",
@@ -148,7 +147,6 @@ export function Booking({ open, setOpen }) {
             >
               {booking.room_type}
             </p>
-
             <p
               style={{
                 margin: "20px 30px 30px 40px",
