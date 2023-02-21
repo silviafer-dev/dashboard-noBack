@@ -77,7 +77,7 @@ export function Booking({ open, setOpen }) {
                 alt="guest"
                 style={{ width: "150px" }}
               />
-              <div>
+              <div style={{ marginLeft: "20px" }}>
                 <NameDetail>{booking.full_name}</NameDetail>
                 <IdDetail>ID {booking.id}</IdDetail>
               </div>
@@ -130,7 +130,38 @@ export function Booking({ open, setOpen }) {
               <LinkDetail to="/bookings">← Back to Bookings</LinkDetail>
             </div>
           </ContainerDetail>
-          <ImageBookingRoom src={booking.photo_room} alt="room" />
+          <ImageBookingRoom
+            style={{
+              backgroundImage: `url(${booking.photo_room})`,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+              flexWrap: "wrap",
+            }}
+          >
+            <p
+              style={{
+                margin: " 0 0 0 40px",
+                color: "white",
+                fontSize: "16px",
+              }}
+            >
+              {booking.room_type}
+            </p>
+
+            <p
+              style={{
+                margin: "20px 30px 30px 40px",
+                color: "white",
+                fontSize: "12px",
+                opacity: " 0.6",
+              }}
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              beatae, dolorem voluptatum expedita quasi cumque nam error
+              praesentium officia.
+            </p>
+          </ImageBookingRoom>
         </div>
       </ContainerColumn>
     </ContainerPage>

@@ -9,11 +9,15 @@ export const Image = styled.img`
 export const Logo = styled.img`
   padding: 20px 0;
 `;
-export const ImageBookingRoom = styled.img`
+export const ImageBookingRoom = styled.div`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 50%;
-  object-fit: cover;
-  margin: 30px 30px 30px 0;
-  height: 100%;
-  border-radius: 0 20px 20px 0;
   height: 580px;
+  margin: 30px 30px 30px 0;
+  border-radius: 0 20px 20px 0;
+  -moz-box-shadow: inset 10 -130px 130px -130px rgb();
+  -webkit-box-shadow: inset 10 -130px 130px -130px rgb();
+  box-shadow: inset 0 -130px 130px 0px rgba(0, 0, 0, 0.8);
 `;
