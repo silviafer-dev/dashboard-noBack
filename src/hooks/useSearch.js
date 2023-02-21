@@ -9,8 +9,8 @@ export const useSearch = (bookings) => {
   };
 
   useEffect(() => {
-    const results = bookings.filter((person) =>
-      person.full_name.toLowerCase().includes(searchBooking.toLowerCase())
+    const results = bookings.filter(({ full_name }) =>
+      full_name.toLowerCase().includes(searchBooking.toLowerCase())
     );
     setSearchResults(results);
   }, [bookings, searchBooking]);

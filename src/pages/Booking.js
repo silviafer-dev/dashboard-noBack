@@ -78,10 +78,11 @@ export function Booking({ open, setOpen }) {
             </div>
           </CheckBlock>
 
-          <ItemsDetail>Room Type</ItemsDetail>
-          <p>{booking.room_type} </p>
-          <ItemsDetail>Room Number </ItemsDetail>
-          <p>{booking.room_number}</p>
+          <ItemsDetail>Room Info</ItemsDetail>
+          <p>
+            {booking.room_type} - {booking.room_number}
+          </p>
+
           <ItemsDetail>Special request</ItemsDetail>
           <p>{booking.special_request}</p>
           <ButtonStatus status={booking.status}>{booking.status}</ButtonStatus>
