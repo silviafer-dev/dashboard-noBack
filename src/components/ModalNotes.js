@@ -15,10 +15,19 @@ export const ModalNotes = ({
     <NotesModal>
       <CloseButton onClick={handleCloseNotes}>X</CloseButton>
       <h3>{currentNote.full_name}</h3>
-
+      <p
+        style={{
+          fontWeight: "bold",
+          alignSelf: "flex-start",
+          marginTop: "20px",
+        }}
+      >
+        Special Request:
+      </p>
       <p>
-        <span style={{ fontWeight: "bold" }}>Special Request:</span>{" "}
-        {currentNote.special_request}
+        {currentNote.special_request !== ""
+          ? currentNote.special_request
+          : "No special requests have been made"}
       </p>
     </NotesModal>
   );

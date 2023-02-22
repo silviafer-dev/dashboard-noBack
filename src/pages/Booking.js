@@ -95,7 +95,11 @@ export function Booking({ open, setOpen }) {
             </p>
 
             <ItemsDetail>Special request</ItemsDetail>
-            <p style={{ fontSize: "14px" }}>{booking.special_request}</p>
+            <p style={{ fontSize: "14px" }}>
+              {booking.special_request !== ""
+                ? booking.special_request
+                : "No special requests have been made"}
+            </p>
             <div>
               <IconEdit
                 onClick={() => {
