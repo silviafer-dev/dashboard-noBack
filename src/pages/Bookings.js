@@ -29,6 +29,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useSearch } from "../hooks/useSearch";
 import { SearchIcon } from "../styles/icons";
+import { ModalNotes } from "../components/ModalNotes";
+import { useModalNotes } from "../hooks/useModalNotes";
 
 let PageSize = 10;
 
@@ -40,6 +42,9 @@ export function Bookings({ open, setOpen }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const { searchResults, searchBooking, handleChange } = useSearch(roomState);
+  const { handleCloseNotes, currentNote, handleOpenNotes, openNotesModal } =
+    useModalNotes();
+
   useEffect(() => {
     document.title = "HMiranda | Bookings";
   }, []);
@@ -54,6 +59,7 @@ export function Bookings({ open, setOpen }) {
   const handleClose = () => {
     setOpenModal(false);
   };
+
   useEffect(() => {
     const orderedRooms = bookings.filter((room) => room[orderBy]);
     orderedRooms.sort((a, b) => {
@@ -97,6 +103,11 @@ export function Bookings({ open, setOpen }) {
               <option value="check_in">Check In</option>
               <option value="check_out">Check Out</option>
             </SelectButton>
+            <ModalNotes
+              openNotesModal={openNotesModal}
+              handleCloseNotes={handleCloseNotes}
+              currentNote={currentNote}
+            />
             <AddBooking openModal={openModal} handleClose={handleClose} />
             <LightButton onClick={handleOpen}>Add New Booking</LightButton>
           </div>
@@ -154,7 +165,9 @@ export function Bookings({ open, setOpen }) {
                 <Date>{booking.check_out}</Date>
 
                 <td>
-                  <ViewNotesButton>View Notes</ViewNotesButton>
+                  <ViewNotesButton onClick={() => handleOpenNotes(booking)}>
+                    View Notes
+                  </ViewNotesButton>
                 </td>
                 <Date>
                   <div>

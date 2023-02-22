@@ -15,7 +15,6 @@ import {
   ContainerDetailBooking,
   ItemsDetail,
   LinkDetail,
-  PhotoDetail,
   PriceDetail,
   RoomBlock,
 } from "../styles/detail-page";

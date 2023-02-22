@@ -31,6 +31,16 @@ export const BookingModal = styled(Modal)`
   }
 `;
 
+export const NotesModal = styled(BookingModal)`
+  width: fit-content;
+  height: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+`;
+
 export const TitleModal = styled.h3`
   color: black;
   font-size: 27px;

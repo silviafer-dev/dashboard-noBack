@@ -57,7 +57,7 @@ export const ViewNotesButton = styled(Button)`
   background-color: #eef9f2;
   z-index: 0;
   padding: 10px;
-  cursor: none;
+  cursor: pointer;
 `;
 
 export const NavPageButton = styled(Button)`
