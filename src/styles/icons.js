@@ -8,7 +8,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 export const SearchIcon = styled(FiSearch)`
   position: absolute;
   left: 6px;
-  bottom: 11px;
+  bottom: 8px;
   font-size: 20px;
 `;
 

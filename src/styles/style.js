@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const InputSearch = styled.input`
-  padding: 10px 10px 10px 28px;
+  padding: 7px 7px 7px 28px;
   border-radius: 10px;
   border: 2px solid #135846;
   color: #135846;
-  font-size: 16px;
+  font-size: 14px;
 `;
 
 export const NavLink = styled(Link)`
@@ -36,6 +36,7 @@ export const TrHead = styled.tr`
   background-color: white;
   border-radius: 20px;
   margin-bottom: 2px;
+  font-size: 14px;
 `;
 
 export const KpiNumber = styled.p`

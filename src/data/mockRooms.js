@@ -1,10 +1,11 @@
 export const MockRooms = [
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.crystalcrownkl.com/wp-content/uploads/sites/4/photo-gallery/june_2018/1-Superior_Double.jpg",
     room_type: "Double Superior",
     room_number: 93,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Available",
     price: "853.70",
     discount: "735.19",
@@ -15,10 +16,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.crystalcrownkl.com/wp-content/uploads/sites/4/photo-gallery/june_2018/1-Superior_Double.jpg",
     room_type: "Double Superior",
     room_number: 9,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "889.82",
     discount: "738.76",
@@ -29,10 +31,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.maidsheadhotel.co.uk/wp-content/uploads/2017/05/215-single.jpg",
     room_type: "Single bed",
     room_number: 22,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "477.36",
     discount: "351.90",
@@ -43,10 +46,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.maidsheadhotel.co.uk/wp-content/uploads/2017/05/215-single.jpg",
     room_type: "Single bed",
     room_number: 92,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Available",
     price: "455.83",
     discount: "394.97",
@@ -57,10 +61,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.maidsheadhotel.co.uk/wp-content/uploads/2017/05/215-single.jpg",
     room_type: "Single bed",
     room_number: 59,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Available",
     price: "838.36",
     discount: "785.10",
@@ -71,10 +76,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
     room_type: "Suite",
     room_number: 40,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Available",
     price: "530.06",
     discount: "425.23",
@@ -85,10 +91,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
-    room_type: "Single bed",
+      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
+    room_type: "Double bed",
     room_number: 11,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "582.60",
     discount: "482.44",
@@ -99,10 +106,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
     room_type: "Suite",
     room_number: 20,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "829.64",
     discount: "732.40",
@@ -113,10 +121,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://www.maidsheadhotel.co.uk/wp-content/uploads/2017/05/215-single.jpg",
     room_type: "Single bed",
     room_number: 71,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "645.67",
     discount: "571.57",
@@ -127,10 +136,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
-    room_type: "Single bed",
+      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
+    room_type: "Double bed",
     room_number: 23,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "758.83",
     discount: "699.66",
@@ -141,10 +151,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
     room_type: "Suite",
     room_number: 82,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Available",
     price: "760.47",
     discount: "738.52",
@@ -155,10 +166,11 @@ export const MockRooms = [
   },
   {
     photo:
-      "https://imgs.search.brave.com/7FzYueXnqOq4O5QIttubGnyjU9T-Re5HpIZF4sZvl38/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/WVpYUUFNT3VVSHlT/WFNsNFVKRVlnSGFF/NyZwaWQ9QXBp",
+      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
     room_type: "Double bed",
     room_number: 6,
-    description: "",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur, distinctio aliquid deleniti obcaecati culpa nihil est qui voluptas mollitia, dolores neque voluptatum natus perferendis labore voluptate reiciendis accusantium cumque.",
     status: "Booked",
     price: "486.23",
     discount: "430.51",

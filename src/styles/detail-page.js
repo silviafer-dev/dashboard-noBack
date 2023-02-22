@@ -5,18 +5,18 @@ import { Id } from "./style";
 import { Button, CheckStatusRoom } from "./style-buttons";
 
 export const ContainerDetail = styled.div`
-  margin: 30px;
+  margin: 30px 0 30px 30px;
   background-color: white;
   border-radius: 20px;
   border: none;
   height: 100%;
-  padding: 30px;
+  padding: 10px 30px;
 `;
 export const ContainerDetailBooking = styled.div`
   background-color: white;
   border-radius: 20px;
   border: none;
-  padding: 30px;
+  padding: 10px 30px;
   width: 50%;
   margin: 30px 0 30px 30px;
   border-radius: 20px 0 0 20px;
@@ -46,20 +46,10 @@ export const ButtonStatus = styled(Button)`
   width: fit-content;
   margin: 20px 0;
 `;
-export const ButtonDelete = styled.button`
-padding 5px 30px;
-background-color: white;
-font-size: 17px;
-border-radius: 10px;
-border: none;
-  &:hover {
-   font-size: 25px;
-   cursor: pointer;
-  }
-`;
 
 export const LinkDetail = styled(Link)`
   text-decoration: none;
+  margin: -10px;
   height: 50px;
   align-items: center;
   color: #799283;
@@ -73,7 +63,8 @@ export const RoomBlock = styled.div`
   display: flex;
 `;
 export const PhotoDetail = styled.img`
-  width: 50%;
+  width: 270px;
+  height: 250px;
   margin: 0 50px 20px 0;
   border-radius: 20px;
 `;

@@ -65,28 +65,58 @@ export function Users({ open, setOpen }) {
             <TrHead>
               <th
                 style={{
-                  width: "130px",
+                  width: "105px",
                   borderTopLeftRadius: "20px",
                   padding: "20px",
                 }}
               >
                 Photo
               </th>
-              <th>User</th>
-              <th>Job</th>
               <th
                 style={{
-                  width: "200px",
+                  width: "110px",
+                }}
+              >
+                User
+              </th>
+              <th
+                style={{
+                  width: "100px",
+                }}
+              >
+                Job
+              </th>
+              <th
+                style={{
+                  width: "180px",
                 }}
               >
                 Email
               </th>
-              <th>Phone</th>
-              <th>Start Date</th>
-              <th>Functions</th>
               <th
                 style={{
-                  width: "110px",
+                  width: "120px",
+                }}
+              >
+                Phone
+              </th>
+              <th
+                style={{
+                  width: "120px",
+                }}
+              >
+                Start Date
+              </th>
+              <th
+                style={{
+                  width: "120px",
+                }}
+              >
+                Functions
+              </th>
+              <th
+                style={{
+                  width: "80px",
                 }}
               >
                 Status
@@ -94,7 +124,7 @@ export function Users({ open, setOpen }) {
               <th
                 style={{
                   borderTopRightRadius: "20px",
-                  padding: "20px",
+                  padding: "10px",
                   width: "40px",
                 }}
               ></th>
@@ -114,11 +144,13 @@ export function Users({ open, setOpen }) {
                 </td>
                 <td>
                   <LinkList to={`/users/${user.id}`}>
-                    <UserName>{user.full_name}</UserName>
+                    <UserName style={{ padding: "0" }}>
+                      {user.full_name}
+                    </UserName>
                     <Id>{user.id}</Id>
                   </LinkList>
                 </td>
-                <td>{user.job_title}</td>
+                <td style={{ fontSize: "12px" }}>{user.job_title}</td>
                 <TableTd>{user.email}</TableTd>
                 <NumberTd>
                   <span>📞</span>

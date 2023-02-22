@@ -62,7 +62,7 @@ export const ListItem = ({
           <Id>{item.id}</Id>
         </LinkList>
       </td>
-      <td style={{ textOverflow: "" }}>{item.amenities}</td>
+      <td style={{ textOverflow: "", fontSize: "12px" }}>{item.amenities}</td>
 
       <PriceRoom>
         <span> $</span>

@@ -48,7 +48,9 @@ export const Ribbon = styled.div`
         ? "#5ad07a"
         : "" || props.status === "Check Out"
         ? "#e23428"
-        : ""};
+        : "" || props.status === "Available"
+        ? "green"
+        : "red"};
     position: absolute;
     top: 38px;
     right: -49px;

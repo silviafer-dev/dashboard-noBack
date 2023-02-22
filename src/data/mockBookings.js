@@ -209,7 +209,8 @@ export const MockBookings = [
   },
   {
     full_name: "Terrance Lowe",
-    photo_guest: "",
+    photo_guest:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-9R5StyXx49XEHlphZcgpFJc84AmcRTrdA&usqp=CAU",
     id: "b0d609f2-b257",
     order_date: "2021-10-16",
     check_in: "2022-05-19",
@@ -224,7 +225,7 @@ export const MockBookings = [
   },
   {
     full_name: "Randall White",
-    photo_guest: "",
+    photo_guest: "https://freesvg.org/img/1547510251.png",
     id: "7049f650-0b82",
     order_date: "2022-03-24",
     check_in: "2021-11-25",
@@ -427,102 +428,6 @@ export const MockBookings = [
     photo_room:
       "https://www.maidsheadhotel.co.uk/wp-content/uploads/2017/05/215-single.jpg",
     room_number: 55,
-    status: "In progress",
-  },
-  {
-    full_name: "Dean Paucek",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpksu6S3Rc6c62Ce5RmC5DGRK9Bu3Q4Nal0A&usqp=CAU",
-    id: "7877bce4",
-    order_date: "2022-04-11",
-    check_in: "2021-09-06",
-    check_out: "2021-09-09",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Suite",
-    photo_room:
-      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
-    room_number: 89,
-    status: "In progress",
-  },
-  {
-    full_name: "Guadalupe Jenkins",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkzFinPI2k4HCMWfY3uw-7UEmg2f7XJOA0ng&usqp=CAU",
-    id: "1eec83bc-a90f",
-    order_date: "2021-11-23",
-    check_in: "2022-04-10",
-    check_out: "2021-11-13",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Double bed",
-    photo_room:
-      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
-    room_number: 17,
-    status: "Check Out",
-  },
-  {
-    full_name: "Edna Simonis",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe62WzncWu-N60-wOw_IMiiTqPhooh3nCe5g&usqp=CAU",
-    id: "d76e667d-bffd",
-    order_date: "2022-01-29",
-    check_in: "2022-01-22",
-    check_out: "2021-11-07",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Double bed",
-    photo_room:
-      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
-    room_number: 7,
-    status: "Check Out",
-  },
-  {
-    full_name: "Rosalie Dietrich",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRT_UwLl5Aht8S64XfgmlxxEON6xpUa9vdnNUJBXmTLpVACqXNbkCyxGx97N76PLtCNpk&usqp=CAU",
-    id: "e231ea55-50db",
-    order_date: "2021-09-09",
-    check_in: "2022-08-02",
-    check_out: "2022-04-13",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Suite",
-    photo_room:
-      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
-    room_number: 12,
-    status: "In progress",
-  },
-  {
-    full_name: "Kim Dicki",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzO1DQvlKFNc1R87AY03I8EqkWObyWCOpIwA&usqp=CAU",
-    id: "60bb30da-6ce9",
-    order_date: "2022-01-13",
-    check_in: "2021-08-12",
-    check_out: "2022-07-21",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Double bed",
-    photo_room:
-      "https://d3rg18dos0rgue.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double3.jpg",
-    room_number: 94,
-    status: "In progress",
-  },
-  {
-    full_name: "Nathan Blick",
-    photo_guest:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0WxAubQyY-WaN8W-esXaxi_SfTKpjHYIf9w&usqp=CAU",
-    id: "df465dc2-3bcf",
-    order_date: "2022-01-04",
-    check_in: "2022-01-20",
-    check_out: "2022-01-28",
-    special_request:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa temporibus eum ipsam nobis nulla alias corrupti labore quos tempora aut hic nostrum aliquid, facilis ut modi magni asperiores adipisci!",
-    room_type: "Suite",
-    photo_room:
-      "https://lh5.googleusercontent.com/hbi2os5doGfcairEVFRpqMUXuV5RI4lNeNHKwLZy8l86uNYczA8j0z5O2pbXBeeGqQh1Ry2oR0oCczLSKE2GxUJaItnf2q2FiOY-0eiuaxBiSEGYQhOUhmVSfBXxDOVFJwkf3yWn",
-    room_number: 11,
     status: "In progress",
   },
 ];

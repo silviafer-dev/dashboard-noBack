@@ -67,7 +67,7 @@ export const NavPageButton = styled(Button)`
 `;
 export const SelectButton = styled.select`
   cursor: pointer;
-  width: 200px;
+  width: 180px;
   margin: 20px;
   padding: 10px;
   background-color: #135846;
@@ -99,9 +99,10 @@ export const LightButton = styled.button`
   color: #135846;
   font-weight: 900;
   background-color: #ebf1ef;
-  padding: 10px;
+  padding: 7px;
   border-radius: 10px;
   cursor: pointer;
+  border: 2px solid #135846;
 `;
 export const SliderButton = styled.button`
   margin: 20px 0 0 20px;
